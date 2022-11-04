@@ -13,9 +13,10 @@ public class LootBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //print("NNNNNNNNNNNNOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTHING");
+
     }
-    
+
     public void PickUp (){
         //GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
         //Destroy(effect, 0.1f);
@@ -24,9 +25,11 @@ public class LootBox : MonoBehaviour
         }
         
     void OnTriggerStay(Collider other){
+        print("Touch");
         if(other.transform.tag == "Player"){
-        //other.transform.GetComponent<Player>().TakeDamage(damageToPlayer);
-        PickUp();
+            print("Player Touch!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            //other.transform.GetComponent<Player>().TakeDamage(damageToPlayer);
+            PickUp();
         }
     }
 }
