@@ -28,7 +28,7 @@ public class LootBox : MonoBehaviour
         print("Touch");
         if(other.transform.tag == "Player"){
             print("Player Touch!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            //other.transform.GetComponent<Player>().TakeDamage(damageToPlayer);
+            //other.transform.GetComponent<Player>().Healing(20);
             PickUp();
         }
     }
