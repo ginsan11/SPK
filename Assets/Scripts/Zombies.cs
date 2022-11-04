@@ -8,12 +8,7 @@ public class Zombies : MonoBehaviour
     public GameObject player;
     // private NavMeshAgent enemy;
     [SerializeField] private float moveSpeed = 1.0f; 
-    // [SerializeField] private float health = 100.0f; 
-
-    // [SerializeField] private float damageToPlayer = 20.0f;
-    // [SerializeField] private float damageRate = 0.2f;
-    // [SerializeField] private float damageTime; 
-    // Start is called before the first frame update
+    
     void Start()
     {
 
