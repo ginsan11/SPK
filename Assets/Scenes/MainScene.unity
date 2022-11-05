@@ -627,6 +627,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 850487568754978852}
   moveSpeed: 3
+  health: 100
+  damageToPlayer: 20
+  damageRate: 0.2
+  damageTime: 0
 --- !u!224 &664268850 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5052445417812705533, guid: a6f804efc48324f0a8349840c69a9809, type: 3}
@@ -799,6 +803,11 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 910194e4f60998e49ab3f63656d56ca2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abfe6fc5a9b390a488839c1fc3b58dcd, type: 3}
+--- !u!1 &897427278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7350624665204139557, guid: a6f804efc48324f0a8349840c69a9809, type: 3}
+  m_PrefabInstance: {fileID: 149848558}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a62c3f9f23f4bf1aa866b1e36d4013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerHealth: {fileID: 897427278}
 --- !u!1001 &1548197072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1271,6 +1281,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 850487568754978852}
   moveSpeed: 2
+  health: 100
+  damageToPlayer: 20
+  damageRate: 0.2
+  damageTime: 0
 --- !u!1 &1811618354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,7 +1446,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5857273414333873091, guid: a6f804efc48324f0a8349840c69a9809, type: 3}
   m_PrefabInstance: {fileID: 149848558}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 897427278}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}

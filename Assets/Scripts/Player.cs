@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
-    [SerializeField] public float health = 100.0f;
+    public static float health = 100.0f;
 
 
 
@@ -55,7 +55,6 @@ public class Player : MonoBehaviour
 
     public void Healing (float heals) {
         if (health < 100.0f) {
-            print("");
             health += heals;
         }
     }
