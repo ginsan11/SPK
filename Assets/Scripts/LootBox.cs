@@ -31,7 +31,7 @@ public class LootBox : MonoBehaviour
         if(other.transform.tag == "Player"){
             print("Player Touch!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             //PlayerHealth.GetComponent<Player>().health += 30.0f;
-            GameManager.instance.healthIncrease(30.0f);
+            //GameManager.instance.healthIncrease(30.0f);
             //Player.health += 20.0f;
             //other.transform.GetComponent<Player>().Healing(20);
             PickUp();

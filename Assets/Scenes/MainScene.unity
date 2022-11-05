@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -627,12 +627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350ed059655fd1448a7b1127de498b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 850487568754978852}
-  moveSpeed: 3
-  health: 100
-  damageToPlayer: 20
-  damageRate: 0.2
-  damageTime: 0
 --- !u!224 &664268850 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5052445417812705533, guid: a6f804efc48324f0a8349840c69a9809, type: 3}
@@ -1143,6 +1137,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8063073397250431797, guid: f0271df749728104eac22c3d897fd8ce, type: 3}
   m_PrefabInstance: {fileID: 3927590975486725090}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1105174939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1105174941}
+  - component: {fileID: 1105174940}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1105174940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105174939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f632f475d5e27489178d5d2014aad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1105174941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105174939}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -123.24553, y: 5.3499446, z: -105.53619}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1236777444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1553,7 +1591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36ca8bc82d77a8c4692a73cd1abac08a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   healthSlider: {fileID: 2094514873}
   healef: 0
   powU: 0
