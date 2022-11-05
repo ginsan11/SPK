@@ -53,11 +53,11 @@ public class Player : MonoBehaviour
     //     }
     // }
 
-    public void Healing (float heals) {
-        if (health < 100.0f) {
-            health += heals;
-        }
-    }
+    // public void Healing (float heals) {
+    //     if (health < 100.0f) {
+    //         health += heals;
+    //     }
+    // }
 
    
 
