@@ -29,9 +29,10 @@ public class Zombies : MonoBehaviour
 
      private void Movement () {
 
-         Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, moveSpeed * Time.deltaTime);
-        transform.position += transform.forward * 1f * Time.deltaTime;
+        if (player) { //null reference check
+            transform.LookAt(player.transform.position); //Look at the player
+            transform.position += transform.forward * moveSpeed * Time.deltaTime;             
+        }
         
     }
 
