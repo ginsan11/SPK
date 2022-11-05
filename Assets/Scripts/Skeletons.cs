@@ -30,9 +30,10 @@ public class Skeletons : MonoBehaviour
 
      private void Movement () {
 
-        Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
+         Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, moveSpeed * Time.deltaTime);
         transform.position += transform.forward * 1f * Time.deltaTime;
+
         
     }
 
