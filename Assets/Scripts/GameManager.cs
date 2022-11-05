@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
-    // public GameObject player;
+    public GameObject player;
 
      public Text scoreText;
     // public Text NAMENSID;
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     //public static Canvas ShopMenu = GetComponent<Canvas>();
     // public GameObject ShopMenu;
     // public GameObject Projectile;
-    // public GameObject Health;
+    public GameObject Health;
     //public GameObject CoinAmount;
 
 
@@ -52,14 +52,14 @@ public class GameManager : MonoBehaviour
         // KillCount();    
     }
 
-    // void Awake(){
-    //     if(instance == null){
-    //         instance = this;
-    //     }
-    //     else if (instance != this){
-    //         Destroy(gameObject);
-    //     }
-    // }
+    void Awake(){
+        if(instance == null){
+            instance = this;
+        }
+        else if (instance != this){
+            Destroy(gameObject);
+        }
+    }
 
     void SetScoreText()
     {
@@ -110,8 +110,8 @@ public class GameManager : MonoBehaviour
     //     }
     // }
 
-    // public void healthIncrease(float health){
-    //     Health.GetComponent<Player>().health += 30.0f;
-    // }
+    public void healthIncrease(float health){
+        Health.GetComponent<Player>().health += 30.0f;
+    }
 
 }

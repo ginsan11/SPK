@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
-    public static float health = 100.0f;
+    public float health;
 
 
 
@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     {
         healthSlider.maxValue = 100.0f;
         healthSlider.value = health;
+        health = 100.0f;
     }
 
     // Update is called once per frame
