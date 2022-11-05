@@ -44,10 +44,10 @@ public class Zombies : MonoBehaviour
         }
     }
 
-    void OnTriggerStay(Collider other) {
-        if (other.transform.tag == "Player" && Time.time > damageTime) {
-            other.transform.GetComponent<Player>().health = other.transform.GetComponent<Player>().health - 20f; 
-            damageTime = Time.time + damageRate;             
-        }        
-    }
+    // void OnTriggerStay(Collider other) {
+    //     if (other.transform.tag == "Player" && Time.time > damageTime) {
+    //         other.transform.GetComponent<Player>().health = other.transform.GetComponent<Player>().health - 20f; 
+    //         damageTime = Time.time + damageRate;             
+    //     }        
+    // }
 }
