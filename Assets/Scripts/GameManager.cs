@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     // public GameObject player;
 
-    // public Text scoreText;
+     public Text scoreText;
     // public Text NAMENSID;
 
     // public int SpawnChoice = 100;
@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     // public float EnnemyHealth = 100f;
 
 
-    // private int score = 0;
+     private int score = 0;
     // private int kills = 0;
 
     //public static Canvas ShopMenu = GetComponent<Canvas>();
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // ShopMenu.gameObject.SetActive(false);
-        // SetScoreText();
+        SetScoreText();
         // NAMENSID.text = "HBM657 \n BETUBONSO MUNUNU";
         //damageIncrease();
     }
@@ -61,15 +61,17 @@ public class GameManager : MonoBehaviour
     //     }
     // }
 
-    // void SetScoreText(){
-    //     scoreText.text = "Score: " + score.ToString();
-    // }
+    void SetScoreText()
+    {
+        scoreText.text = "Score: " + score.ToString();
+    }
 
-    // public void AddPoints(int scoreToAdd){
-    //     score += scoreToAdd;
-    //     Debug.Log(score);
-    //     SetScoreText();
-    // }
+    public void AddPoints(int scoreToAdd)
+    {
+        score += scoreToAdd;
+        Debug.Log(score);
+        SetScoreText();
+    }
 
     // public void AddKills(int killToAdd){
     //     kills += killToAdd;

@@ -5,12 +5,15 @@ using UnityEngine;
 public class House : MonoBehaviour
 {
     private bool switch1;
+    public GameObject ShopMenu;
+
 
     // Start is called before the first frame update
     void Start()
     {
         switch1 = false;
-        
+        ShopMenu.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -20,7 +23,8 @@ public class House : MonoBehaviour
     }
     
     public void OpenShop(){
-        Time.timeScale = 0;
+        PauseGame();
+        //Time.timeScale = 0;
         //ShopMenu.gameObject.SetActive(true);
         }
         
@@ -31,4 +35,19 @@ public class House : MonoBehaviour
         OpenShop();
         }
     }
+
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        ShopMenu.gameObject.SetActive(true);
+    }
+
+    public void ResumeGame()
+    {
+        ShopMenu.gameObject.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+
 }
