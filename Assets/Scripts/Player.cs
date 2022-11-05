@@ -43,15 +43,13 @@ public class Player : MonoBehaviour
 
   
 
-    // public void TakeDamage(float damage) {
-    //     health -= damage;
+    public void TakeDamage(float damage) {
+        health -= damage;
 
-    //     if (health <= 0) {
-    //         GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
-    //         Destroy(effect, 1.0f);
-    //         Destroy(this.gameObject);
-    //     }
-    // }
+        if (health <= 0) {
+            Destroy(this.gameObject);
+        }
+    }
 
     // public void Healing (float heals) {
     //     if (health < 100.0f) {

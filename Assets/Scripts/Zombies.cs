@@ -29,10 +29,9 @@ public class Zombies : MonoBehaviour
 
      private void Movement () {
 
-        if (player) { //null reference check
-            transform.LookAt(player.transform.position); //Look at the player
-            transform.position += transform.forward * moveSpeed * Time.deltaTime;             
-        }
+         Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, moveSpeed * Time.deltaTime);
+        transform.position += transform.forward * 1f * Time.deltaTime;
         
     }
 
@@ -44,10 +43,10 @@ public class Zombies : MonoBehaviour
         }
     }
 
-    // void OnTriggerStay(Collider other) {
-    //     if (other.transform.tag == "Player" && Time.time > damageTime) {
-    //         other.transform.GetComponent<Player>().health = other.transform.GetComponent<Player>().health - 20f; 
-    //         damageTime = Time.time + damageRate;             
-    //     }        
-    // }
+    void OnTriggerStay(Collider other) {
+        if (other.transform.tag == "Player" && Time.time > damageTime) {
+            other.transform.GetComponent<Player>().TakeDamage(damageToPlayer); 
+            damageTime = Time.time + damageRate;             
+        }        
+    }
 }
