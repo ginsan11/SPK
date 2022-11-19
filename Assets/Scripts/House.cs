@@ -13,6 +13,7 @@ public class House : MonoBehaviour
     {
         switch1 = false;
         ShopMenu.gameObject.SetActive(false);
+        regainMouse();
 
     }
 
@@ -20,6 +21,11 @@ public class House : MonoBehaviour
     void Update()
     {
         
+    }
+    public void regainMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
     
     public void OpenShop(){
