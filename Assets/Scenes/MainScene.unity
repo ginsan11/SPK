@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -628,12 +628,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350ed059655fd1448a7b1127de498b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 850487568754978852}
   moveSpeed: 1
   health: 100
   damageToPlayer: 20
   damageRate: 0.2
   damageTime: 0
+--- !u!136 &588422910
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588422900}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.15037458
+  m_Height: 0.79914284
+  m_Direction: 1
+  m_Center: {x: 0.24232554, y: -0.0110394955, z: 0.04270858}
 --- !u!1 &589376539 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1352667442311122144, guid: 2d183bbef65714589946e91dde98bbbf, type: 3}
@@ -767,11 +781,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400170, guid: abfe6fc5a9b390a488839c1fc3b58dcd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.242
+      value: 0.248
       objectReference: {fileID: 0}
     - target: {fileID: 400170, guid: abfe6fc5a9b390a488839c1fc3b58dcd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.293
+      value: -0.352
       objectReference: {fileID: 0}
     - target: {fileID: 400170, guid: abfe6fc5a9b390a488839c1fc3b58dcd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1054,38 +1068,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5720176648685448749, guid: 5d08cfcdd1ea8b747b618cc87e2daa47, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720176648708214568, guid: 5d08cfcdd1ea8b747b618cc87e2daa47, type: 3}
-      propertyPath: m_Size.x
-      value: 0.8020619
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720176648708214568, guid: 5d08cfcdd1ea8b747b618cc87e2daa47, type: 3}
-      propertyPath: m_Size.y
-      value: 0.73876256
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720176648708214568, guid: 5d08cfcdd1ea8b747b618cc87e2daa47, type: 3}
-      propertyPath: m_Size.z
-      value: 0.21455312
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720176648708214568, guid: 5d08cfcdd1ea8b747b618cc87e2daa47, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720176648708214568, guid: 5d08cfcdd1ea8b747b618cc87e2daa47, type: 3}
-      propertyPath: m_Center.x
-      value: 0.24258822
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720176648708214568, guid: 5d08cfcdd1ea8b747b618cc87e2daa47, type: 3}
-      propertyPath: m_Center.y
-      value: 0.064281486
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720176648708214568, guid: 5d08cfcdd1ea8b747b618cc87e2daa47, type: 3}
-      propertyPath: m_Center.z
-      value: 0.029832268
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720176648708214568, guid: 5d08cfcdd1ea8b747b618cc87e2daa47, type: 3}
-      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5720176648708214569, guid: 5d08cfcdd1ea8b747b618cc87e2daa47, type: 3}
@@ -2032,6 +2014,20 @@ MonoBehaviour:
   damageToPlayer: 20
   damageRate: 0.2
   damageTime: 0
+--- !u!136 &1683113053
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683113041}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.32616678
+  m_Height: 0.9934391
+  m_Direction: 1
+  m_Center: {x: -0.7737605, y: 0.9479515, z: 0.05384318}
 --- !u!4 &1891756557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4684403152539725594, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
@@ -2852,30 +2848,6 @@ PrefabInstance:
     - target: {fileID: 1972013686519617052, guid: 2b44b54ab6b4bc548abad0eb41af1df9, type: 3}
       propertyPath: m_Name
       value: Skeletons
-      objectReference: {fileID: 0}
-    - target: {fileID: 1972013686519617054, guid: 2b44b54ab6b4bc548abad0eb41af1df9, type: 3}
-      propertyPath: m_Size.x
-      value: 0.50532025
-      objectReference: {fileID: 0}
-    - target: {fileID: 1972013686519617054, guid: 2b44b54ab6b4bc548abad0eb41af1df9, type: 3}
-      propertyPath: m_Size.y
-      value: 0.80283827
-      objectReference: {fileID: 0}
-    - target: {fileID: 1972013686519617054, guid: 2b44b54ab6b4bc548abad0eb41af1df9, type: 3}
-      propertyPath: m_Size.z
-      value: 0.5377096
-      objectReference: {fileID: 0}
-    - target: {fileID: 1972013686519617054, guid: 2b44b54ab6b4bc548abad0eb41af1df9, type: 3}
-      propertyPath: m_Center.x
-      value: -0.80752057
-      objectReference: {fileID: 0}
-    - target: {fileID: 1972013686519617054, guid: 2b44b54ab6b4bc548abad0eb41af1df9, type: 3}
-      propertyPath: m_Center.y
-      value: 0.90556085
-      objectReference: {fileID: 0}
-    - target: {fileID: 1972013686519617054, guid: 2b44b54ab6b4bc548abad0eb41af1df9, type: 3}
-      propertyPath: m_Center.z
-      value: 0.053512555
       objectReference: {fileID: 0}
     - target: {fileID: 1972013686519617055, guid: 2b44b54ab6b4bc548abad0eb41af1df9, type: 3}
       propertyPath: m_RootOrder
