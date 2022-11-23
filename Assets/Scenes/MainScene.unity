@@ -2014,8 +2014,8 @@ MonoBehaviour:
   damageToPlayer: 20
   damageRate: 0.2
   damageTime: 0
---- !u!136 &1683113053
-CapsuleCollider:
+--- !u!65 &1683113050
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2024,10 +2024,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.32616678
-  m_Height: 0.9934391
-  m_Direction: 1
-  m_Center: {x: -0.7737605, y: 0.9479515, z: 0.05384318}
+  serializedVersion: 2
+  m_Size: {x: 0.58950806, y: 0.7541555, z: 0.52613324}
+  m_Center: {x: -0.7173971, y: 0.91316307, z: 0.0716095}
 --- !u!4 &1891756557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4684403152539725594, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
