@@ -8,7 +8,7 @@ public class Skeletons : MonoBehaviour
     [SerializeField] private float moveSpeed = 1.0f; 
     [SerializeField] private float health = 100.0f; 
 
-    [SerializeField] private float damageToPlayer = 20.0f;
+    [SerializeField] private float damageToPlayer = 10.0f;
     [SerializeField] private float damageRate = 0.2f;
     [SerializeField] private float damageTime; 
 
@@ -46,7 +46,7 @@ public class Skeletons : MonoBehaviour
     }
 
     void OnTriggerStay(Collider other) {
-        if (other.transform.tag == "Player" && Time.time > damageTime) {
+        if (other.transform.CompareTag("Player") && Time.time > damageTime) {
             other.transform.GetComponent<Player>().TakeDamage(damageToPlayer); 
             damageTime = Time.time + damageRate;             
         }        
