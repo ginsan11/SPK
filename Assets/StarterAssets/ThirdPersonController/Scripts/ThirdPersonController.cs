@@ -109,7 +109,6 @@ namespace StarterAssets
         private const float _threshold = 0.01f;
 
         private bool _hasAnimator;
-        private Player _playerScript;
 
         private bool IsCurrentDeviceMouse
         {
@@ -131,8 +130,6 @@ namespace StarterAssets
             {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
-
-            _playerScript = FindObjectOfType<Player>();
         }
 
         private void Start()
@@ -216,9 +213,6 @@ namespace StarterAssets
 
         private void Move()
         {
-            //If the player has died do not move anything.
-            if (_playerScript.isPlayerDead) return;
-            
             // set target speed based on move speed, sprint speed and if sprint is pressed
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
@@ -226,15 +220,7 @@ namespace StarterAssets
 
             // note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
             // if there is no input, set the target speed to 0
-            if (_input.move == Vector2.zero)
-            {
-                targetSpeed = 0.0f;
-                //Debug.Log("We are not Moving At ALL.");
-                if (!_playerScript.isPlayAttackAnimation)
-                {
-                    _playerScript.PlayIdleAnimation();
-                }
-            }
+            if (_input.move == Vector2.zero) targetSpeed = 0.0f;
 
             // a reference to the players current horizontal velocity
             float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
@@ -276,8 +262,6 @@ namespace StarterAssets
 
                 // rotate to face input direction relative to camera position
                 transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
-                //Debug.Log("We are Moving.");
-                _playerScript.PlayMoveAnimation();
             }
 
 
