@@ -13,11 +13,14 @@ public class cars : MonoBehaviour
     [SerializeField] private float damageRate = 0.2f;
     [SerializeField] private float damageTime;
 
-
-    // Start is called before the first frame update
+    public Zombies zombie;
+    public Skeletons skeleton;
     void Start()
     {
-
+        zombie = FindObjectOfType<Zombies>();
+        skeleton = FindObjectOfType<Skeletons>();
+        Physics.IgnoreCollision(zombie.GetComponent<Collider>(), GetComponent<Collider>(), true);
+        Physics.IgnoreCollision(skeleton.GetComponent<Collider>(), GetComponent<Collider>(), true);
     }
 
     // Update is called once per frame

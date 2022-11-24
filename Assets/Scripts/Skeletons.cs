@@ -8,14 +8,16 @@ public class Skeletons : MonoBehaviour
     [SerializeField] private float moveSpeed = 1.0f; 
     [SerializeField] private float health = 100.0f; 
 
-    [SerializeField] private float damageToPlayer = 10.0f;
+    [SerializeField] private float damageToPlayer = 20.0f;
     [SerializeField] private float damageRate = 0.2f;
     [SerializeField] private float damageTime; 
-
+    public Transform carPrefab;
     // Start is called before the first frame update
+    
     void Start()
     {
-        
+        Transform car = Instantiate(carPrefab) as Transform;
+        Physics.IgnoreCollision(car.GetComponent<Collider>(), GetComponent<Collider>(), true);
     }
 
     // Update is called once per frame
@@ -46,7 +48,7 @@ public class Skeletons : MonoBehaviour
     }
 
     void OnTriggerStay(Collider other) {
-        if (other.transform.CompareTag("Player") && Time.time > damageTime) {
+        if (other.transform.tag == "Player" && Time.time > damageTime) {
             other.transform.GetComponent<Player>().TakeDamage(damageToPlayer); 
             damageTime = Time.time + damageRate;             
         }        

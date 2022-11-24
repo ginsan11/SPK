@@ -14,9 +14,12 @@ public class Zombies : MonoBehaviour
     [SerializeField] private float damageRate = 0.2f;
     [SerializeField] private float damageTime; 
     
+     public Transform carPrefab;
+    // Start is called before the first frame update
     void Start()
     {
-
+        Transform car = Instantiate(carPrefab) as Transform;
+        Physics.IgnoreCollision(car.GetComponent<Collider>(), GetComponent<Collider>(), true);
     }
 
     // Update is called once per frame
@@ -29,14 +32,10 @@ public class Zombies : MonoBehaviour
 
      private void Movement () {
 
-        /*if (player) { //null reference check
+        if (player) { //null reference check
             transform.LookAt(player.transform.position); //Look at the player
             transform.position += transform.forward * moveSpeed * Time.deltaTime;             
-        }*/
-        
-        Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, moveSpeed * Time.deltaTime);
-        transform.position += transform.forward * 1f * Time.deltaTime;
+        }
         
     }
 
