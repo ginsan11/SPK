@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 {
 
     public float health;
+    public GameObject deathMenu;
 
 
 
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        deathMenu.gameObject.SetActive(false);
         healthSlider.maxValue = 100.0f;
         healthSlider.value = health;
         health = 100.0f;
@@ -42,14 +44,25 @@ public class Player : MonoBehaviour
         // }
     }
 
-  
 
-    public void TakeDamage(float damage) {
+
+    public void TakeDamage(float damage)
+    {
         health -= damage;
 
-        if (health <= 0) {
-            Destroy(this.gameObject);
+        if (health <= 0)
+        {
+ //           Destroy(this.gameObject);
+            regainMouse();
+            OpenDeathMenu();
         }
+    }
+
+    public void killGame()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+        deathMenu.gameObject.SetActive(false);
+        Cursor.visible = false;
     }
 
     // public void Healing (float heals) {
@@ -58,7 +71,7 @@ public class Player : MonoBehaviour
     //     }
     // }
 
-   
+
 
     // public void healEffect()
     // {
@@ -81,6 +94,26 @@ public class Player : MonoBehaviour
     // }
 
 
-}
 
+    public void regainMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+
+    public void OpenDeathMenu()
+    {
+        PauseGame();
+        //Time.timeScale = 0;
+        //ShopMenu.gameObject.SetActive(true);
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        deathMenu.gameObject.SetActive(true);
+    }
+
+}
 
