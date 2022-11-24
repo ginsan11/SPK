@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-
+    public GameObject deathMenu;
     public float health;
     // public GameObject deathEffect;
     public Slider healthSlider;
@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        deathMenu.gameObject.SetActive(false);
         healthSlider.maxValue = 100.0f;
         healthSlider.value = health;
         health = 100.0f;
@@ -114,7 +115,35 @@ public class Player : MonoBehaviour
             //Set the bool of death to be true so as to disable the movement.
             isPlayerDead = true;
             Destroy(this.gameObject);
+            regainMouse();
+            OpenDeathMenu();
         }
+    }
+
+    public void killGame()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+        deathMenu.gameObject.SetActive(false);
+        Cursor.visible = false;
+    }
+    public void regainMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+
+    public void OpenDeathMenu()
+    {
+        PauseGame();
+        //Time.timeScale = 0;
+        //ShopMenu.gameObject.SetActive(true);
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        deathMenu.gameObject.SetActive(true);
     }
 
     // public void Healing (float heals) {
@@ -123,7 +152,7 @@ public class Player : MonoBehaviour
     //     }
     // }
 
-   
+
 
     // public void healEffect()
     // {
