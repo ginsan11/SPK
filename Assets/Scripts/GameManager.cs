@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
 
     public GameObject player;
-    public Text scoreText;
+    [SerializeField] public Text scoreText;
     public int score = 0;
     public GameObject Health;
 
@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (player == null)
         {
             score = 0;
