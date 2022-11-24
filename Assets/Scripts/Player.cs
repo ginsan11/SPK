@@ -122,6 +122,7 @@ public class Player : MonoBehaviour
 
     public void restartGame()
     {
+
         print("restarting");
         deathMenu.gameObject.SetActive(false);
         Cursor.visible = false;
@@ -129,7 +130,7 @@ public class Player : MonoBehaviour
 
     public void killGame()
     {
-        Application.LoadLevel(Application.loadedLevel);
+        Application.Quit();
         deathMenu.gameObject.SetActive(false);
         Cursor.visible = false;
     }
