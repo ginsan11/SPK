@@ -63,7 +63,11 @@ public class GameManager : MonoBehaviour
 
     void SetScoreText()
     {
-        scoreText.text = "Score: " + score.ToString();
+        if (player.gameObject != null)
+        {
+            scoreText.text = "Score: " + score.ToString();
+
+        }
     }
 
     public void AddPoints(int scoreToAdd)

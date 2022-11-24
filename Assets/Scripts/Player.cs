@@ -120,6 +120,13 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void restartGame()
+    {
+        print("restarting");
+        deathMenu.gameObject.SetActive(false);
+        Cursor.visible = false;
+    }
+
     public void killGame()
     {
         Application.LoadLevel(Application.loadedLevel);
@@ -135,16 +142,12 @@ public class Player : MonoBehaviour
 
     public void OpenDeathMenu()
     {
-        PauseGame();
-        //Time.timeScale = 0;
-        //ShopMenu.gameObject.SetActive(true);
-    }
-
-    public void PauseGame()
-    {
+        regainMouse();
         Time.timeScale = 0;
         deathMenu.gameObject.SetActive(true);
     }
+
+   
 
     public void KillPlayer() {
         isPlayerDead = true;
