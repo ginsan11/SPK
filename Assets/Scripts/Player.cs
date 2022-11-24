@@ -209,6 +209,20 @@ public class Player : MonoBehaviour
         //Debug.Log("Called Play Attack Animation.");
     }
 
+    public void fullHeal()
+    {
+        if (GameManager.instance.score >= 2)
+        {
+            healef = 1;
+            GameManager.instance.score -= 2;
+            GameManager.instance.scoreText.text = "Score: " + GameManager.instance.score.ToString();
+            health = 100f;
+        }
+        else
+        {
+            print("Tryna scam me eh?");
+        }
+    }
 }
 
 
