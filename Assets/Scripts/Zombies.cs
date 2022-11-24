@@ -14,11 +14,11 @@ public class Zombies : MonoBehaviour
     [SerializeField] private float damageRate = 0.2f;
     [SerializeField] private float damageTime; 
     
-    public cars car;
+    public GameObject car;
     // Start is called before the first frame update
     void Start()
     {
-        car = FindObjectOfType<cars>();
+        // car = FindObjectOfType<cars>();
         Physics.IgnoreCollision(car.GetComponent<Collider>(), GetComponent<Collider>(), true);
     }
 

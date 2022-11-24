@@ -12,7 +12,7 @@ public class Skeletons : MonoBehaviour
     [SerializeField] private float damageToPlayer = 1.0f;
     [SerializeField] private float damageRate = 0.2f;
     [SerializeField] private float damageTime; 
-    public cars car;
+    public GameObject car;
 
     public Animator animator;
     private float distance;
@@ -22,7 +22,7 @@ public class Skeletons : MonoBehaviour
     {
         childObject = transform.GetChild(0).gameObject;
         animator = childObject.GetComponent<Animator>();
-        car = FindObjectOfType<cars>();
+        // car = FindObjectOfType<cars>();
         Physics.IgnoreCollision(car.GetComponent<Collider>(), GetComponent<Collider>(), true);
     }
 
