@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 5720176648708214571}
   - component: {fileID: 5720176648708214574}
   - component: {fileID: 5720176648708214569}
+  - component: {fileID: 5720176648708214568}
   m_Layer: 0
   m_Name: Zombies
   m_TagString: Untagged
@@ -115,3 +116,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5720176648708214568
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5720176648708214570}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2259216, y: 1.3904761, z: 0.38241577}
+  m_Center: {x: 0.4105072, y: 0.1807875, z: -1.8503189}

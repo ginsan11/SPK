@@ -49,7 +49,7 @@ public class House : MonoBehaviour
         ShopMenu.gameObject.SetActive(true);
     }
 
-    public void NextLevel()
+    public void ResumeGame()
     {
         ShopMenu.gameObject.SetActive(false);
         Time.timeScale = 1;
