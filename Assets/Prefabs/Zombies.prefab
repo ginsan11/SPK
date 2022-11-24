@@ -115,13 +115,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350ed059655fd1448a7b1127de498b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 9193869979808450016, guid: e39fb7f078b43ab4abc1bc6048e671f7, type: 3}
   moveSpeed: 1
   health: 100
   damageToPlayer: 10
   damageRate: 0.2
   damageTime: 0
-  carPrefab: {fileID: 8489666541655714578, guid: cdda652a53fe6492488d30fa0640a74f, type: 3}
+  car: {fileID: 6382978084412958299, guid: cdda652a53fe6492488d30fa0640a74f, type: 3}
 --- !u!136 &1458333532106203256
 CapsuleCollider:
   m_ObjectHideFlags: 0

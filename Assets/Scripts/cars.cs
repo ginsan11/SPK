@@ -13,12 +13,12 @@ public class cars : MonoBehaviour
     [SerializeField] private float damageRate = 0.2f;
     [SerializeField] private float damageTime;
 
-    public Zombies zombie;
-    public Skeletons skeleton;
+    public GameObject zombie;
+    public GameObject skeleton;
     void Start()
     {
-        zombie = FindObjectOfType<Zombies>();
-        skeleton = FindObjectOfType<Skeletons>();
+        // zombie = FindObjectOfType<Zombies>();
+        // skeleton = FindObjectOfType<Skeletons>();
         Physics.IgnoreCollision(zombie.GetComponent<Collider>(), GetComponent<Collider>(), true);
         Physics.IgnoreCollision(skeleton.GetComponent<Collider>(), GetComponent<Collider>(), true);
     }
