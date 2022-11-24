@@ -7,7 +7,7 @@ public class ZombieSpawner : MonoBehaviour
 
     public GameObject ZombiePrefab;
 
-    [SerializeField] private float spawnRate = 5.0f;
+    [SerializeField] private float spawnRate;
 
     private float spawnTimer;
     //public Transform[] spawnPoints;
@@ -18,7 +18,7 @@ public class ZombieSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        spawnRate = 5.5f;
     }
 
     // Update is called once per frame

@@ -7,14 +7,14 @@ public class SkeletonSpawner : MonoBehaviour
     public GameObject SkeletonPrefab;
     //public Transform[] spawnPoints;
 
-    [SerializeField] private float spawnRate = 5.0f;
+    [SerializeField] private float spawnRate;
 
     private float spawnTimer;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        spawnRate = 5.5f;
     }
 
     // Update is called once per frame

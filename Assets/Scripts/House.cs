@@ -6,6 +6,8 @@ public class House : MonoBehaviour
 {
     private bool switch1;
     public GameObject ShopMenu;
+    public GameObject Zombies;
+    public GameObject Skeletons;
 
 
     // Start is called before the first frame update
@@ -51,6 +53,7 @@ public class House : MonoBehaviour
 
     public void NextLevel()
     {
+        //Zombies.GetComponent<Enemy>().damageToPlayer += 1.0f;
         ShopMenu.gameObject.SetActive(false);
         Time.timeScale = 1;
     }
