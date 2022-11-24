@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class House : MonoBehaviour
 {
     private bool switch1;
     public GameObject ShopMenu;
-    public GameObject Zombies;
-    public GameObject Skeletons;
+    public GameObject ZombiePrefab;
+    public GameObject SkeletonPrefab;
 
 
     // Start is called before the first frame update
@@ -53,8 +55,10 @@ public class House : MonoBehaviour
 
     public void NextLevel()
     {
-        //Zombies.GetComponent<Enemy>().damageToPlayer += 1.0f;
+        ZombiePrefab.GetComponent<Zombies>().damageToPlayer += 1.0f;
+        SkeletonPrefab.GetComponent<Skeletons>().damageToPlayer += 1.0f;
         ShopMenu.gameObject.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
 

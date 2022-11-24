@@ -9,7 +9,7 @@ public class Skeletons : MonoBehaviour
     [SerializeField] private float moveSpeed = 1.0f; 
     [SerializeField] private float health = 100.0f; 
 
-    [SerializeField] private float damageToPlayer = 1.0f;
+    [SerializeField] public float damageToPlayer = 1.0f;
     [SerializeField] private float damageRate = 0.2f;
     [SerializeField] private float damageTime; 
     public GameObject car;
