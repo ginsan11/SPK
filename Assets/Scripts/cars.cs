@@ -37,8 +37,8 @@ public class cars : MonoBehaviour
     {
         if (other.transform.tag == "Player" && Time.time > damageTime)
         {
-            other.transform.GetComponent<Player>().TakeDamage(damageToPlayer);
-            damageTime = Time.time + damageRate;
+            other.transform.GetComponent<Player>().KillPlayer();
+            //damageTime = Time.time + damageRate;
         }
     }
 }

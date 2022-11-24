@@ -146,6 +146,10 @@ public class Player : MonoBehaviour
         deathMenu.gameObject.SetActive(true);
     }
 
+    public void KillPlayer() {
+        isPlayerDead = true;
+    }
+
     // public void Healing (float heals) {
     //     if (health < 100.0f) {
     //         health += heals;
