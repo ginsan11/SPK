@@ -11,7 +11,9 @@ public class ProjectileDamageScript : MonoBehaviour
         {
             //If We have triggered with the enemy which is the skeleton.
             //Give the skeleton a damage of 10
-            FindObjectOfType<Skeletons>().TakeDamage(10);
+            FindObjectOfType<Skeletons>().TakeDamage(50);
+            FindObjectOfType<Zombies>().TakeDamage(50);
+
             Debug.Log("Received Enemy Damage From Projectile");
             
             //Destroy this Projectile.
@@ -19,3 +21,9 @@ public class ProjectileDamageScript : MonoBehaviour
         }
     }
 }
+
+
+// if (other.GetType().Namespace == "Skeletons")
+
+
+

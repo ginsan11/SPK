@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+
 
 public class Player : MonoBehaviour
 {
@@ -122,10 +124,11 @@ public class Player : MonoBehaviour
 
     public void restartGame()
     {
-
         print("restarting");
         deathMenu.gameObject.SetActive(false);
-        Cursor.visible = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
+        ReleaseMouse();
     }
 
     public void killGame()
@@ -140,7 +143,11 @@ public class Player : MonoBehaviour
         Cursor.visible = true;
     }
 
-
+    public void ReleaseMouse()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+    }
     public void OpenDeathMenu()
     {
         regainMouse();
@@ -152,6 +159,9 @@ public class Player : MonoBehaviour
 
     public void KillPlayer() {
         isPlayerDead = true;
+        Destroy(this.gameObject);
+        regainMouse();
+        OpenDeathMenu();
     }
 
     // public void Healing (float heals) {

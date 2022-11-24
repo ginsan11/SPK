@@ -17,7 +17,7 @@ public class House : MonoBehaviour
     {
         switch1 = false;
         ShopMenu.gameObject.SetActive(false);
-        regainMouse();
+        //regainMouse();
 
     }
 
@@ -31,7 +31,13 @@ public class House : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
-    
+
+    public void ReleaseMouse()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+    }
+
     public void OpenShop(){
         PauseGame();
         //Time.timeScale = 0;
@@ -51,6 +57,7 @@ public class House : MonoBehaviour
     {
         Time.timeScale = 0;
         ShopMenu.gameObject.SetActive(true);
+        regainMouse();
     }
 
     public void NextLevel()
@@ -60,6 +67,7 @@ public class House : MonoBehaviour
         ShopMenu.gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
+        ReleaseMouse();
     }
 
 
