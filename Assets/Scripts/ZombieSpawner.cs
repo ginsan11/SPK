@@ -7,7 +7,7 @@ public class ZombieSpawner : MonoBehaviour
 
     public GameObject ZombiePrefab;
 
-    [SerializeField] private float spawnRate = 1.0f;
+    [SerializeField] private float spawnRate = 5.0f;
 
     private float spawnTimer;
     //public Transform[] spawnPoints;

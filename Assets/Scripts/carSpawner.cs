@@ -6,13 +6,14 @@ public class carSpawner : MonoBehaviour
 {
     public GameObject carsPreFab;
 
-    [SerializeField] private float spawnRate = 1.0f;
+    [SerializeField] private float spawnRate;
 
     private float spawnTimer;
 
     // Start is called before the first frame update
     void Start()
     {
+        spawnRate = 5.0f;
 
     }
 

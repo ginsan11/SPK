@@ -7,7 +7,7 @@ public class SkeletonSpawner : MonoBehaviour
     public GameObject SkeletonPrefab;
     //public Transform[] spawnPoints;
 
-    [SerializeField] private float spawnRate = 1.0f;
+    [SerializeField] private float spawnRate = 5.0f;
 
     private float spawnTimer;
 
