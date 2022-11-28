@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     // public GameObject deathEffect;
     public Slider healthSlider;
     // public GameObject powerupEffect;
-    // public GameObject healingEffect;
+    public GameObject healingEffect;
     public int healef = 0;
     public int powU = 0;
     
@@ -124,11 +124,12 @@ public class Player : MonoBehaviour
 
     public void restartGame()
     {
-        print("restarting");
-        deathMenu.gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
         ReleaseMouse();
+        print("restarting");
+        deathMenu.gameObject.SetActive(false);
+        
     }
 
     public void killGame()
@@ -159,25 +160,38 @@ public class Player : MonoBehaviour
 
     public void KillPlayer() {
         isPlayerDead = true;
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
         regainMouse();
         OpenDeathMenu();
     }
 
-    // public void Healing (float heals) {
-    //     if (health < 100.0f) {
-    //         health += heals;
-    //     }
-    // }
+    public void Healing()
+    {
+        if (GameManager.instance.score >= 20)
+        {
+            if (health < 100.0f)
+            {
+                health += 10;
+                GameManager.instance.score -= 20;
+                
+            }
+            else
+            {
+                print("You don't have enought score");
+            }
+        }
+
+            
+    }
 
 
 
-    // public void healEffect()
-    // {
-    //     GameObject effect = Instantiate(healingEffect, transform.position, transform.rotation);
-    //     Destroy(effect, 1.0f);
-    //     healef = 0;
-    // }
+    public void healEffect()
+    {
+        GameObject effect = Instantiate(healingEffect, transform.position, transform.rotation);
+        Destroy(effect, 1.0f);
+        healef = 0;
+    }
 
 
     // public void powerEffect()

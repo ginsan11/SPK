@@ -39,10 +39,10 @@ public class House : MonoBehaviour
     }
 
     public void OpenShop(){
-        PauseGame();
-        //Time.timeScale = 0;
-        //ShopMenu.gameObject.SetActive(true);
-        }
+        ShowShop();
+        Time.timeScale = 0;
+        ShopMenu.gameObject.SetActive(true);
+    }
         
     void OnTriggerStay(Collider other){
         if(other.transform.tag == "Player" && switch1 == false){
@@ -53,7 +53,7 @@ public class House : MonoBehaviour
     }
 
 
-    public void PauseGame()
+    public void ShowShop()
     {
         Time.timeScale = 0;
         ShopMenu.gameObject.SetActive(true);
