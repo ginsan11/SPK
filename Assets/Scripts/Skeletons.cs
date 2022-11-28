@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Skeletons : MonoBehaviour
 {
-    public GameObject player;
     public GameObject childObject;
     [SerializeField] private float moveSpeed = 1.0f; 
     [SerializeField] private float health = 100.0f; 
@@ -12,18 +11,15 @@ public class Skeletons : MonoBehaviour
     [SerializeField] public float damageToPlayer = 1.0f;
     [SerializeField] private float damageRate = 0.2f;
     [SerializeField] private float damageTime; 
-    public GameObject car;
 
     public Animator animator;
-    private float distance;
     // Start is called before the first frame update
     
     void Start()
     {
         childObject = transform.GetChild(0).gameObject;
         animator = childObject.GetComponent<Animator>();
-        // car = FindObjectOfType<cars>();
-        Physics.IgnoreCollision(car.GetComponent<Collider>(), GetComponent<Collider>(), true);
+       
     }
 
     // Update is called once per frame
@@ -37,9 +33,10 @@ public class Skeletons : MonoBehaviour
 
      private void Movement () {
 
-        Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, moveSpeed * Time.deltaTime);
-        transform.position += transform.forward * 1f * Time.deltaTime;
+        if (GameManager.instance.player) { //null reference check
+            transform.LookAt(GameManager.instance.player.transform.position); //Look at the player
+            transform.position += transform.forward * moveSpeed * Time.deltaTime;             
+        }
 
         
     }

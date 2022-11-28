@@ -5,8 +5,6 @@ using UnityEngine.AI;
 
 public class Zombies : MonoBehaviour
 {
-    public GameObject player;
-    // private NavMeshAgent enemy;
     [SerializeField] private float moveSpeed = 1.0f; 
     [SerializeField] private float health = 100.0f; 
 
@@ -14,12 +12,10 @@ public class Zombies : MonoBehaviour
     [SerializeField] private float damageRate = 0.2f;
     [SerializeField] private float damageTime; 
     
-    public GameObject car;
     // Start is called before the first frame update
     void Start()
     {
-        // car = FindObjectOfType<cars>();
-        Physics.IgnoreCollision(car.GetComponent<Collider>(), GetComponent<Collider>(), true);
+
     }
 
     // Update is called once per frame
@@ -32,8 +28,8 @@ public class Zombies : MonoBehaviour
 
      private void Movement () {
 
-        if (player) { //null reference check
-            transform.LookAt(player.transform.position); //Look at the player
+        if (GameManager.instance.player) { //null reference check
+            transform.LookAt(GameManager.instance.player.transform.position); //Look at the player
             transform.position += transform.forward * moveSpeed * Time.deltaTime;             
         }
         
