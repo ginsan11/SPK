@@ -968,12 +968,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f1de19ee13eda14f9f2645be4ec234e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 959414245064614101, guid: e39fb7f078b43ab4abc1bc6048e671f7, type: 3}
   childObject: {fileID: 0}
   moveSpeed: 2
   health: 100
   damageToPlayer: 10
-  damageRate: 0.2
+  damageRate: 0.5
   damageTime: 0
   animator: {fileID: 0}
 --- !u!65 &191540516691563298

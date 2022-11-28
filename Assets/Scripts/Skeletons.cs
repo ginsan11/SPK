@@ -9,7 +9,7 @@ public class Skeletons : MonoBehaviour
     [SerializeField] private float health = 100.0f; 
 
     [SerializeField] public float damageToPlayer = 1.0f;
-    [SerializeField] private float damageRate = 0.2f;
+    [SerializeField] private float damageRate = 0.5f;
     [SerializeField] private float damageTime; 
 
     public Animator animator;
@@ -19,6 +19,7 @@ public class Skeletons : MonoBehaviour
     {
         childObject = transform.GetChild(0).gameObject;
         animator = childObject.GetComponent<Animator>();
+        animator.SetBool("run", true);
        
     }
 
@@ -29,6 +30,20 @@ public class Skeletons : MonoBehaviour
 
     {
         Movement();
+        if(Vector3.Distance(GameManager.instance.player.transform.position, this.transform.position) < 1.5){
+            animator.SetTrigger("attack");
+            // Debug.Log(animator.GetCurrentAnimatorStateInfo(0).length);
+            if(animator.GetCurrentAnimatorStateInfo(0).length < 0.6)
+            {
+                Attack();
+            }
+
+        }
+        if(Vector3.Distance(GameManager.instance.player.transform.position, this.transform.position) > 1.5){
+            animator.SetBool("run", true);
+
+        }
+
     }
 
      private void Movement () {
@@ -37,6 +52,7 @@ public class Skeletons : MonoBehaviour
             transform.LookAt(GameManager.instance.player.transform.position); //Look at the player
             transform.position += transform.forward * moveSpeed * Time.deltaTime;             
         }
+
 
         
     }
@@ -49,15 +65,11 @@ public class Skeletons : MonoBehaviour
         }
     }
 
-    void OnTriggerStay(Collider other) {
-
-        if (other.transform.tag == "Player" && Time.time > damageTime) {
-            animator.SetTrigger("attack");
-            other.transform.GetComponent<Player>().TakeDamage(damageToPlayer); 
-            damageTime = Time.time + damageRate;             
-        }
-
-            
+    void Attack(){
+        if(Time.time > damageTime){
+        GameManager.instance.player.transform.GetComponent<Player>().TakeDamage(damageToPlayer); 
+        damageTime = Time.time + damageRate;
+        }  
     }
 
    
