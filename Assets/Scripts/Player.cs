@@ -134,9 +134,11 @@ public class Player : MonoBehaviour
 
     public void killGame()
     {
-        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
         deathMenu.gameObject.SetActive(false);
         Cursor.visible = false;
+        Application.Quit();
+        
     }
     public void regainMouse()
     {

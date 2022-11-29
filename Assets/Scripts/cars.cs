@@ -11,8 +11,8 @@ public class cars : MonoBehaviour
     [SerializeField] private float Speed = 8.0f;
     //[SerializeField] private float health = 100.0f;
 
-    [SerializeField] private float damageToPlayer = -9999.0f;
-    [SerializeField] private float damageRate = 0.2f;
+    //[SerializeField] private float damageToPlayer = -9999.0f;
+    //[SerializeField] private float damageRate = 0.2f;
     [SerializeField] private float damageTime;
 
     void Start()
