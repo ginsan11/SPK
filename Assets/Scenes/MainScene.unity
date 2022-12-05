@@ -989,6 +989,7 @@ MonoBehaviour:
   scoreText: {fileID: 1296260662}
   score: 0
   Health: {fileID: 387699500}
+  lvl: 1
 --- !u!4 &1105174941
 Transform:
   m_ObjectHideFlags: 0
@@ -2699,6 +2700,14 @@ PrefabInstance:
     - target: {fileID: 2389890289603141116, guid: 0fc378fb6af6bb64d949c4469d4b7df0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7573164930966453853, guid: 0fc378fb6af6bb64d949c4469d4b7df0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7573164930966545021, guid: 0fc378fb6af6bb64d949c4469d4b7df0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 41
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fc378fb6af6bb64d949c4469d4b7df0, type: 3}
