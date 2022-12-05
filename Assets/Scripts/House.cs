@@ -65,7 +65,9 @@ public class House : MonoBehaviour
         ZombiePrefab.GetComponent<Zombies>().damageToPlayer += 1.0f;
         SkeletonPrefab.GetComponent<Skeletons>().damageToPlayer += 1.0f;
         ShopMenu.gameObject.SetActive(false);
+        GameManager.instance.lvlup();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         Time.timeScale = 1;
         ReleaseMouse();
     }

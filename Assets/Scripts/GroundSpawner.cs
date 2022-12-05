@@ -15,9 +15,8 @@ public class GroundSpawner : MonoBehaviour
     public GameObject Terrain9;
     GameObject[] TerrainArray;
 
-
-
     Vector3 nexTileSpawn;
+    public float currentlvl;
 
  
 
@@ -26,9 +25,14 @@ public class GroundSpawner : MonoBehaviour
     void Start()
     {
         TerrainArray = new GameObject[] { Terrain1, Terrain2, Terrain3, Terrain4, Terrain5, Terrain6, Terrain7, Terrain8, Terrain9 };
+        currentlvl = GameManager.instance.getlvl();
+        print("THIS IS THE CURRENT LEVL    :  " + GameManager.instance.getlvl());
+
         
         nexTileSpawn = TerrainArray[0].transform.GetChild(0).transform.position;
-        SpawnTile();
+        for(float i = 0.0f; i < currentlvl; i++){
+            SpawnTile();
+        }
         //SpawnTile();
     }
 

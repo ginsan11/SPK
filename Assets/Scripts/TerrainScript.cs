@@ -17,12 +17,8 @@ public class TerrainScript : MonoBehaviour
     {
         
     }
-    private void OnTriggerExit (Collider other){
-        if (other.transform.tag == "cars"){
-            other.transform.GetComponent<cars>().Destroy();
-        }
-
-        gs.SpawnTile();
+    //private void OnTriggerExit (Collider other){
+    //    gs.SpawnTile();
         //Destroy(gameObject, 6);
-    }
+    //}
 }

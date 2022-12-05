@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] public Text scoreText;
     public int score = 0;
     public GameObject Health;
+    //[SerializeField] public float lvl = 1.0f;
+    public float lvl = 1.0f;
 
 
     // Start is called before the first frame update
@@ -21,6 +23,18 @@ public class GameManager : MonoBehaviour
         Physics.IgnoreLayerCollision(6,7);
 
         SetScoreText();
+
+
+        if (!instance){
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+            }
+            else{
+                //Duplicate GameManager created every time the scene is loaded
+                Destroy(gameObject);
+                }
+
+
     }
 
     // Update is called once per frame
@@ -58,6 +72,16 @@ public class GameManager : MonoBehaviour
 
     public void healthIncrease(float health){
         Health.GetComponent<Player>().health += 30.0f;
+    }
+
+    public void lvlup(){
+        lvl++;
+        print("NEEEEEEEEEEEEEEEEEEEEEEWWWW: "+lvl);
+    }
+
+    public float getlvl(){
+        print("RETURNED THE FOLLOWING NUMBER  : " + lvl);
+        return lvl;
     }
 
 }
