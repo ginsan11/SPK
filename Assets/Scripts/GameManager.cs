@@ -16,6 +16,15 @@ public class GameManager : MonoBehaviour
     //[SerializeField] public float lvl = 1.0f;
     public float lvl = 1.0f;
 
+    void Awake(){
+        if(instance == null){
+            instance = this;
+        }
+        else if (instance != this){
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -25,14 +34,15 @@ public class GameManager : MonoBehaviour
         SetScoreText();
 
 
-        if (!instance){
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-            }
-            else{
-                //Duplicate GameManager created every time the scene is loaded
-                Destroy(gameObject);
-                }
+        // if (instance==null){
+        //     instance = this;
+        //     }
+        // else if (instance != this){
+        //     //Duplicate GameManager created every time the scene is loaded
+        //     Destroy(gameObject);
+        //     }
+        // DontDestroyOnLoad(gameObject);
+
 
 
     }
@@ -48,14 +58,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Awake(){
-        if(instance == null){
-            instance = this;
-        }
-        else if (instance != this){
-            Destroy(gameObject);
-        }
-    }
+
 
     void SetScoreText()
     {

@@ -17,6 +17,7 @@ public class GroundSpawner : MonoBehaviour
 
     Vector3 nexTileSpawn;
     public float currentlvl;
+    
 
  
 
@@ -30,9 +31,11 @@ public class GroundSpawner : MonoBehaviour
 
         
         nexTileSpawn = TerrainArray[0].transform.GetChild(0).transform.position;
-        for(float i = 0.0f; i < currentlvl; i++){
-            SpawnTile();
+        for(float i = 1.0f; i < currentlvl; i++){
+            SpawnTile(false);
         }
+        SpawnTile(true);
+
         //SpawnTile();
     }
 
@@ -42,11 +45,20 @@ public class GroundSpawner : MonoBehaviour
         
     }
 
-    public void SpawnTile()
+    public void SpawnTile(bool wall)
     {
-        int rand_num = Random.Range(0, 8); //Random Terrain Index Selected 
-        GameObject temp = Instantiate(TerrainArray[rand_num], nexTileSpawn, Quaternion.identity);   //Terrain created
-        nexTileSpawn = temp.transform.GetChild(0).transform.position;  //Spawn point for next terrain selected
+        if (!wall){
+            int rand_num = Random.Range(0, 8); //Random Terrain Index Selected 
+            GameObject temp = Instantiate(TerrainArray[rand_num], nexTileSpawn, Quaternion.identity);   //Terrain created
+            nexTileSpawn = temp.transform.GetChild(0).transform.position;  //Spawn point for next terrain selected
+        }else{
+            int rand_num = Random.Range(0, 8); //Random Terrain Index Selected 
+            GameObject temp = Instantiate(TerrainArray[rand_num], nexTileSpawn, Quaternion.identity);   //Terrain created
+            //Transform edge_wall = temp.transform.Find("Child Name");
+            temp.transform.Find("Edge Rocks").transform.Find("Rock_02 (3)").gameObject.SetActive(true); 
+            //edge_wall.active = true;
+            nexTileSpawn = temp.transform.GetChild(0).transform.position;  //Spawn point for next terrain selected
+        }
     }
 
 }
