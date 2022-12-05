@@ -5,7 +5,7 @@ using UnityEngine;
 public class SkeletonSpawner : MonoBehaviour
 {
     public GameObject SkeletonPrefab;
-    public Transform[] spawnPoints;
+    // public Transform[] spawnPoints;
 
     [SerializeField] private float spawnRate = 5.5f;
 
@@ -26,9 +26,11 @@ public class SkeletonSpawner : MonoBehaviour
     {
         if (Time.time > spawnTimer)
         {
-            int randSpawnPoints = Random.Range(0, spawnPoints.Length);                                      
+            // int randSpawnPoints = Random.Range(0, spawnPoints.Length);  
 
-            Instantiate(SkeletonPrefab, spawnPoints[randSpawnPoints].position, transform.rotation);
+            transform.position = GameManager.instance.player.transform.position + new Vector3(3,0,3);
+
+            Instantiate(SkeletonPrefab, transform.position, transform.rotation);
             spawnTimer = Time.time + spawnRate;
         }
     }

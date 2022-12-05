@@ -7,7 +7,7 @@ public class ZombieSpawner : MonoBehaviour
 
     public GameObject ZombiePrefab;
 
-    public Transform[] spawnPoints;
+    // public Transform[] spawnPoints;
 
     [SerializeField] private float spawnRate = 5.5f;
 
@@ -28,9 +28,9 @@ public class ZombieSpawner : MonoBehaviour
     {
         if (Time.time > spawnTimer)
         {
-            int randSpawnPoints = Random.Range(0, spawnPoints.Length);                                      
+            transform.position = GameManager.instance.player.transform.position + new Vector3(-3,0,3);
 
-            Instantiate(ZombiePrefab, spawnPoints[randSpawnPoints].position, transform.rotation);
+            Instantiate(ZombiePrefab, transform.position, transform.rotation);
             spawnTimer = Time.time + spawnRate;
         }
     }
