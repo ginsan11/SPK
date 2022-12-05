@@ -153,9 +153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ZombiePrefab: {fileID: 8479901611056001638, guid: 93acb8ff669d12c4caec8cc0f9f70bc5, type: 3}
-  spawnPoints:
-  - {fileID: 1036922972}
-  - {fileID: 420664158}
   spawnRate: 5.5
 --- !u!4 &85136999
 Transform:
@@ -727,6 +724,10 @@ PrefabInstance:
     - target: {fileID: 1059568992368766250, guid: bd2a96384db33c94cb210f2dddd8dd56, type: 3}
       propertyPath: m_Name
       value: TileSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 1059568992368766251, guid: bd2a96384db33c94cb210f2dddd8dd56, type: 3}
+      propertyPath: currentlvl
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1059568992368766252, guid: bd2a96384db33c94cb210f2dddd8dd56, type: 3}
       propertyPath: m_RootOrder
@@ -1332,9 +1333,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkeletonPrefab: {fileID: 191540516691563299, guid: 2b44b54ab6b4bc548abad0eb41af1df9, type: 3}
-  spawnPoints:
-  - {fileID: 1023018563}
-  - {fileID: 861471426}
   spawnRate: 5.5
 --- !u!4 &1376455416
 Transform:
@@ -1555,6 +1553,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1849988347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8944336655422409498, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
+  m_PrefabInstance: {fileID: 3927590974872683068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1849988351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849988347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90799f5a7b4a3bd4084313881861d5fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameManager: {fileID: 975896287477094592, guid: 1728a475a0e994c4f860d134e97048d2, type: 3}
 --- !u!4 &1891756557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4684403152539725594, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
