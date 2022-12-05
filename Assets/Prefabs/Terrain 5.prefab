@@ -578,7 +578,7 @@ Transform:
   - {fileID: 4844716750215221074}
   - {fileID: 4844716750321065149}
   m_Father: {fileID: 4844716750449333295}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4844716750297474721
 GameObject:
@@ -817,6 +817,8 @@ GameObject:
   - component: {fileID: 4844716750449333295}
   - component: {fileID: 4844716750449333294}
   - component: {fileID: 4844716750449333293}
+  - component: {fileID: 7217619977241272961}
+  - component: {fileID: 7364417418251290370}
   m_Layer: 0
   m_Name: Terrain 5
   m_TagString: Untagged
@@ -836,6 +838,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2673279452169580371}
   - {fileID: 4844716750413214221}
   - {fileID: 4844716749808327040}
   - {fileID: 4844716750685579296}
@@ -889,6 +892,31 @@ TerrainCollider:
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: d11bdb3b5c3e5cd488add380990b2729, type: 2}
   m_EnableTreeColliders: 1
+--- !u!65 &7217619977241272961
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4844716750449333292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 50, y: 30, z: 52}
+  m_Center: {x: 25, y: 0, z: 25}
+--- !u!114 &7364417418251290370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4844716750449333292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e6de91d8530524197a687ede3fc777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4844716750574516932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,7 +1062,7 @@ Transform:
   - {fileID: 794944536744706443}
   - {fileID: 794944536199927318}
   m_Father: {fileID: 4844716750449333295}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4844716750708011155
 GameObject:
@@ -1207,6 +1235,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carsPreFab: {fileID: 274865843892899846, guid: cdda652a53fe6492488d30fa0640a74f, type: 3}
   spawnRate: 1.75
+--- !u!1 &5409058346215783331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2673279452169580371}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2673279452169580371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5409058346215783331}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -50, y: 0, z: -0.37000275}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4844716750449333295}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4844716749808190208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1224,7 +1283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0880d9ac631f24f409114af2781b3480, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0880d9ac631f24f409114af2781b3480, type: 3}
       propertyPath: m_LocalScale.y
@@ -1298,7 +1357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0880d9ac631f24f409114af2781b3480, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0880d9ac631f24f409114af2781b3480, type: 3}
       propertyPath: m_LocalScale.y
@@ -1372,7 +1431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0880d9ac631f24f409114af2781b3480, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0880d9ac631f24f409114af2781b3480, type: 3}
       propertyPath: m_LocalScale.y

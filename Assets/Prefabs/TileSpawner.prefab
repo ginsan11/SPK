@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1059568992368766250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1059568992368766252}
+  - component: {fileID: 1059568992368766251}
+  m_Layer: 0
+  m_Name: TileSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1059568992368766252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059568992368766250}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -122.51663, y: -1.5378742, z: -90.14972}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1059568992368766251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059568992368766250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b9167f2665204b8e686a8aa8072d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Terrain1: {fileID: 2389890289603141113, guid: 0fc378fb6af6bb64d949c4469d4b7df0, type: 3}
+  Terrain2: {fileID: 7068972301420147031, guid: 1e7e28517808a6845b93bfb130d8a677, type: 3}
+  Terrain3: {fileID: 6057004874561713784, guid: c57a6798700e8ae4986d3bcd7ac12be3, type: 3}
+  Terrain4: {fileID: 1206398845530406674, guid: 9a0c6d71d22dc36448d2b9df3cf7fb28, type: 3}
+  Terrain5: {fileID: 4844716750449333292, guid: c18aa608266609245a9923b49907b524, type: 3}
+  Terrain6: {fileID: 8157678149579032019, guid: 51e4dce6b72d23d44a17b23afad3d605, type: 3}
+  Terrain7: {fileID: 362549270451857252, guid: aa1100d54b1cecd42839b600a7ec0773, type: 3}
+  Terrain8: {fileID: 4978056347545737133, guid: 139a500be48b0bb4b981e87b25ee3d62, type: 3}
+  Terrain9: {fileID: 8273988812404300759, guid: 98eaefe8516299740807deed3ed5bc22, type: 3}

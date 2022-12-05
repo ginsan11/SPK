@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4353862095274356386}
   m_Layer: 7
   m_Name: cars
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,8 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 9193869979808450016, guid: e39fb7f078b43ab4abc1bc6048e671f7, type: 3}
   Speed: 8
-  damageToPlayer: 20
-  damageRate: 0.2
   damageTime: 0
 --- !u!54 &4353862095274356386
 Rigidbody:

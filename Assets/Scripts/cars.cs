@@ -23,7 +23,7 @@ public class cars : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
+        Movement(); 
     }
 
     private void Movement()
@@ -40,5 +40,10 @@ public class cars : MonoBehaviour
             other.transform.GetComponent<Player>().KillPlayer();
             //damageTime = Time.time + damageRate;
         }
+    }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
     }
 }
