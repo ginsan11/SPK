@@ -32,19 +32,19 @@ public class Skeletons : MonoBehaviour
 
     {
         Movement();
-        if(Vector3.Distance(GameManager.instance.player.transform.position, this.transform.position) < 1.5){
-            animator.SetTrigger("attack");
-            // Debug.Log(animator.GetCurrentAnimatorStateInfo(0).length);
-            if(animator.GetCurrentAnimatorStateInfo(0).length < 0.6)
-            {
-                Attack();
-            }
+        // if(Vector3.Distance(GameManager.instance.player.transform.position, this.transform.position) < 1.5){
+        //     animator.SetTrigger("attack");
+        //     // Debug.Log(animator.GetCurrentAnimatorStateInfo(0).length);
+        //     if(animator.GetCurrentAnimatorStateInfo(0).length < 0.6)
+        //     {
+        //         Attack();
+        //     }
 
-        }
-        if(Vector3.Distance(GameManager.instance.player.transform.position, this.transform.position) > 1.5){
-            animator.SetBool("run", true);
+        // }
+        // if(Vector3.Distance(GameManager.instance.player.transform.position, this.transform.position) > 1.5){
+        //     animator.SetBool("run", true);
 
-        }
+        // }
 
     }
 
@@ -67,11 +67,12 @@ public class Skeletons : MonoBehaviour
         }
     }
 
-    void Attack(){
-        if(Time.time > damageTime){
-        player.transform.GetComponent<Player>().TakeDamage(damageToPlayer); 
-        damageTime = Time.time + damageRate;
-        }  
+    void OnTriggerStay(Collider other) {
+        if (other.transform.tag == "Player" && Time.time > damageTime) {
+            animator.SetTrigger("attack");
+            other.transform.GetComponent<Player>().TakeDamage(damageToPlayer); 
+            damageTime = Time.time + damageRate;             
+        }        
     }
 
    
