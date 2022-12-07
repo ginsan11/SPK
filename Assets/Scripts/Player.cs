@@ -115,8 +115,9 @@ public class Player : MonoBehaviour
         {
             healthSlider.value = health;
             //Set the bool of death to be true so as to disable the movement.
-            isPlayerDead = true;
-            Destroy(this.gameObject);
+            //isPlayerDead = true;
+            //Destroy(this.gameObject);
+            KillPlayer();
             regainMouse();
             OpenDeathMenu();
         }
