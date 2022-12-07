@@ -13,10 +13,12 @@ public class Skeletons : MonoBehaviour
     [SerializeField] private float damageTime; 
 
     public Animator animator;
+    public Player player;
     // Start is called before the first frame update
     
     void Start()
     {
+        player = FindObjectOfType<Player>();
         childObject = transform.GetChild(0).gameObject;
         animator = childObject.GetComponent<Animator>();
         animator.SetBool("run", true);
@@ -67,7 +69,7 @@ public class Skeletons : MonoBehaviour
 
     void Attack(){
         if(Time.time > damageTime){
-        GameManager.instance.player.transform.GetComponent<Player>().TakeDamage(damageToPlayer); 
+        player.transform.GetComponent<Player>().TakeDamage(damageToPlayer); 
         damageTime = Time.time + damageRate;
         }  
     }
