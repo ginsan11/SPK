@@ -44,6 +44,6 @@ public class cars : MonoBehaviour
 
     public void Destroy()
     {
-        Destroy(gameObject);
+        Destroy(gameObject, 1);
     }
 }
