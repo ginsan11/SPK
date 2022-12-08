@@ -14,8 +14,8 @@ public class SwordColliderDamage : MonoBehaviour
             {
                 Debug.Log("Attacked The Enemy With Sword!");
             
-                //Call the Skeleton Script and make it take a damage of 20.
-                FindObjectOfType<Skeletons>().TakeDamage(20);
+                
+                FindObjectOfType<Skeletons>().TakeDamage(100);
             }
         }
     }
