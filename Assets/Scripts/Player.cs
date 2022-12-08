@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public GameObject deathMenu;
+    public GameObject startMenu;
     public float health;
     // public GameObject deathEffect;
     public Slider healthSlider;
@@ -42,6 +43,13 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        if (GameManager.instance.getlvl() == 1.0f)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Time.timeScale = 0;
+        }
+
         deathMenu.gameObject.SetActive(false);
         healthSlider.maxValue = 100.0f;
         healthSlider.value = health;
@@ -250,6 +258,16 @@ public class Player : MonoBehaviour
         {
             print("Tryna scam me eh?");
         }
+    }
+
+    public void resume()
+    {
+        //startMenu.gameObject.SetActive(false);
+        GameObject temp = GameObject.FindGameObjectWithTag("startMenu");
+        temp.SetActive(false);
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+        Time.timeScale = 1;
     }
 }
 

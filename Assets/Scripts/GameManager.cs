@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
 
     public GameObject player;
-    [SerializeField] public Text scoreText;
+    public Text scoreText;
     public int score = 0;
     public GameObject Health;
     //[SerializeField] public float lvl = 1.0f;
@@ -50,14 +50,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score = 0;
-        scoreText.text = "Score: " + score.ToString();
+       
+        SetScoreText();
     }
 
 
 
     void SetScoreText()
     {
+        // scoreTEXT <-- is the tag for scoretext
         scoreText.text = "Score: " + score.ToString(); //This will allow us to concatonate two strings in C#    
 
     }
