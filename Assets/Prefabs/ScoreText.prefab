@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 576606100666786236}
   m_Layer: 5
   m_Name: ScoreText
-  m_TagString: Untagged
+  m_TagString: scoreTEXT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Gold: 99999'
+  m_Text: 'Score: 99999'
 --- !u!114 &576606100666786236
 MonoBehaviour:
   m_ObjectHideFlags: 0

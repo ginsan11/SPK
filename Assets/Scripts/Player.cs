@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 {
     public GameObject deathMenu;
     public GameObject startMenu;
+    public Text scoreText;
     public float health;
     // public GameObject deathEffect;
     public Slider healthSlider;
@@ -39,6 +40,16 @@ public class Player : MonoBehaviour
     
     //This will disable movements from the Third person controller when the player dies.
     public bool isPlayerDead;
+
+
+    public void SetScoreText()
+    {
+        // scoreTEXT <-- is the tag for scoretext
+        
+        scoreText.text = "Score: " + GameManager.instance.getScore().ToString(); //This will allow us to concatonate two strings in C# 
+        
+
+    }
 
 
     void Start()
@@ -73,6 +84,8 @@ public class Player : MonoBehaviour
             healthSlider.value = 0;
         }
 
+        
+        SetScoreText();
         CheckMouseInput();
         // if (healef == 1)
         // {
@@ -252,7 +265,7 @@ public class Player : MonoBehaviour
         {
             healef = 1;
             GameManager.instance.score -= 2;
-            GameManager.instance.scoreText.text = "Score: " + GameManager.instance.score.ToString();
+            SetScoreText();
             health = 100f;
         }
         else
