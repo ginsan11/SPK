@@ -39,14 +39,10 @@ public class GroundSpawner : MonoBehaviour
 
         for(int i = 1; i < currentlvl; i++){
             if (houseterrain == i){
-                SpawnTile(false, true);
+                SpawnTile(false);
             }
         }
-        if (houseterrain == currentlvl+1){
-            SpawnTile(true, true);
-        }else{
-            SpawnTile(true, false);
-        }
+        SpawnTile(true);
 
         //SpawnTile();
     }
@@ -57,19 +53,12 @@ public class GroundSpawner : MonoBehaviour
         
     }
 
-    public void SpawnTile(bool wall, bool house)
+    public void SpawnTile(bool wall)
     {
         if (!wall){
             int rand_num = Random.Range(0, 8); //Random Terrain Index Selected 
             GameObject temp = Instantiate(TerrainArray[rand_num], nexTileSpawn, Quaternion.identity);   //Terrain created
             nexTileSpawn = temp.transform.GetChild(0).transform.position;  //Spawn point for next terrain selected
-
-            //House Spawn on map
-            if (house){
-                print("build inside 1");
-                Vector3 randomSpawnPosition = new Vector3(Random.Range(-140.0f, -140.0f), 3.8f, Random.Range(-90f, -90.0f));
-                Instantiate(housePrefab, randomSpawnPosition, Quaternion.identity);
-            }
         }else{  //if terrain needs wall run this 
             int rand_num = Random.Range(0, 8); //Random Terrain Index Selected 
             GameObject temp = Instantiate(TerrainArray[rand_num], nexTileSpawn, Quaternion.identity);   //Terrain created
@@ -77,14 +66,6 @@ public class GroundSpawner : MonoBehaviour
             temp.transform.Find("Edge Rocks").transform.Find("Rock_02 (3)").gameObject.SetActive(true); 
             //edge_wall.active = true;
             nexTileSpawn = temp.transform.GetChild(0).transform.position;  //Spawn point for next terrain selected
-
-            if (house){
-                print("build inside 2");
-
-                Vector3 randomSpawnPosition = new Vector3(Random.Range(-140.0f, -140.0f), 3.8f, Random.Range(-90f, -90.0f));
-                Instantiate(housePrefab, randomSpawnPosition, Quaternion.identity);
-            }
-            
         }
     }
 

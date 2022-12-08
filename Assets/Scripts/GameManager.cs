@@ -63,4 +63,8 @@ public class GameManager : MonoBehaviour
         return lvl;
     }
 
+    public void resetlvl(){
+        lvl = 1;
+    }
+
 }

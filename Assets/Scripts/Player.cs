@@ -5,6 +5,7 @@ using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 
 public class Player : MonoBehaviour
@@ -73,6 +74,7 @@ public class Player : MonoBehaviour
         //Set the hash value of the animation with the relevant animation.
         _isAttackingAnimationHash = Animator.StringToHash("IsPlayAttackAnimation");
         _isMoveForwardAnimationHash = Animator.StringToHash("IsMoveForwardAnimation");
+        SetScoreText();
     }
 
     // Update is called once per frame
@@ -157,7 +159,7 @@ public class Player : MonoBehaviour
 
     public void killGame()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         deathMenu.gameObject.SetActive(false);
         Cursor.visible = false;
         Application.Quit();

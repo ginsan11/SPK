@@ -476,6 +476,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 37815901088049822}
     m_Modifications:
+    - target: {fileID: 4597521189709829527, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597521189709829527, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597521189709829527, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4684403152539725594, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -833,6 +845,10 @@ PrefabInstance:
       propertyPath: currentlvl
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1059568992368766251, guid: bd2a96384db33c94cb210f2dddd8dd56, type: 3}
+      propertyPath: housePrefab
+      value: 
+      objectReference: {fileID: 1763579858514626797, guid: f4306b5c6c836e44d951fa381c983fa3, type: 3}
     - target: {fileID: 1059568992368766252, guid: bd2a96384db33c94cb210f2dddd8dd56, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1333,21 +1349,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: mushroom_house
       objectReference: {fileID: 0}
+    - target: {fileID: 141948, guid: d5c7fd34c77e1684490361e29a48b555, type: 3}
+      propertyPath: m_TagString
+      value: House
+      objectReference: {fileID: 0}
     - target: {fileID: 402762, guid: d5c7fd34c77e1684490361e29a48b555, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 402762, guid: d5c7fd34c77e1684490361e29a48b555, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 402762, guid: d5c7fd34c77e1684490361e29a48b555, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 402762, guid: d5c7fd34c77e1684490361e29a48b555, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 402762, guid: d5c7fd34c77e1684490361e29a48b555, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1355,7 +1375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 402762, guid: d5c7fd34c77e1684490361e29a48b555, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.35
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 402762, guid: d5c7fd34c77e1684490361e29a48b555, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1412,7 +1432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1582401401
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1561,6 +1581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathMenu: {fileID: 4096746711063241689}
   startMenu: {fileID: 4160089806516920851}
+  scoreText: {fileID: 576606100666786234, guid: 7d124f8bf636b6843a6549004d36c7f2, type: 3}
   health: 50
   healthSlider: {fileID: 2094514873}
   healingEffect: {fileID: 100006, guid: 68849d937b3285f4083f33a1dc4cd5ed, type: 3}
@@ -3187,6 +3208,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 4988742390785460600}
+    - target: {fileID: 2070925441746177913, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 70
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
 --- !u!1001 &3927590974872683068
@@ -3196,6 +3221,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1955210783653544180}
     m_Modifications:
+    - target: {fileID: 8944336655422409496, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
+      propertyPath: field of view
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409496, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: far clip plane
       value: 500

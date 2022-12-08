@@ -9,6 +9,7 @@ TagManager:
   - Car
   - startMenu
   - scoreTEXT
+  - House
   layers:
   - Default
   - TransparentFX
