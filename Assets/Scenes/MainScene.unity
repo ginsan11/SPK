@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ZombiePrefab: {fileID: 8479901611056001638, guid: 93acb8ff669d12c4caec8cc0f9f70bc5, type: 3}
+  player: {fileID: 0}
   spawnRate: 5.5
 --- !u!4 &85136999
 Transform:
@@ -1201,6 +1202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SkeletonPrefab: {fileID: 191540516691563299, guid: 2b44b54ab6b4bc548abad0eb41af1df9, type: 3}
   spawnRate: 5.5
+  player: {fileID: 0}
 --- !u!4 &1376455416
 Transform:
   m_ObjectHideFlags: 0
@@ -1456,6 +1458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathMenu: {fileID: 4096746711063241689}
+  startMenu: {fileID: 4160089806516920851}
   health: 50
   healthSlider: {fileID: 2094514873}
   healingEffect: {fileID: 100006, guid: 68849d937b3285f4083f33a1dc4cd5ed, type: 3}
@@ -2105,6 +2108,10 @@ PrefabInstance:
     - target: {fileID: 576606100666786232, guid: 7d124f8bf636b6843a6549004d36c7f2, type: 3}
       propertyPath: m_Name
       value: ScoreText
+      objectReference: {fileID: 0}
+    - target: {fileID: 576606100666786232, guid: 7d124f8bf636b6843a6549004d36c7f2, type: 3}
+      propertyPath: m_TagString
+      value: scoreTEXT
       objectReference: {fileID: 0}
     - target: {fileID: 576606100666786235, guid: 7d124f8bf636b6843a6549004d36c7f2, type: 3}
       propertyPath: m_Pivot.x
@@ -3405,6 +3412,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5447993828225413172, guid: 850102765448a2749a80bef9fec27729, type: 3}
   m_PrefabInstance: {fileID: 8223768799796482616}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4160089806516920851 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5447993828225413163, guid: 850102765448a2749a80bef9fec27729, type: 3}
+  m_PrefabInstance: {fileID: 8223768799796482616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4382669348184652111
 GameObject:
   m_ObjectHideFlags: 0
@@ -4695,6 +4707,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1891756558}
     - target: {fileID: 5447993827918699230, guid: 850102765448a2749a80bef9fec27729, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447993827918699230, guid: 850102765448a2749a80bef9fec27729, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: killGame
       objectReference: {fileID: 0}
@@ -4706,9 +4722,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1891756558}
+    - target: {fileID: 5447993828078721357, guid: 850102765448a2749a80bef9fec27729, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: resume
+      objectReference: {fileID: 0}
     - target: {fileID: 5447993828225413163, guid: 850102765448a2749a80bef9fec27729, type: 3}
       propertyPath: m_Name
       value: StartMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447993828225413163, guid: 850102765448a2749a80bef9fec27729, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447993828225413163, guid: 850102765448a2749a80bef9fec27729, type: 3}
+      propertyPath: m_TagString
+      value: startMenu
       objectReference: {fileID: 0}
     - target: {fileID: 5447993828225413172, guid: 850102765448a2749a80bef9fec27729, type: 3}
       propertyPath: m_Pivot.x
