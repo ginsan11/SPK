@@ -12,9 +12,13 @@ public class Zombies : MonoBehaviour
     [SerializeField] private float damageRate = 0.2f;
     [SerializeField] private float damageTime; 
     
+    public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+
 
     }
 
@@ -29,10 +33,10 @@ public class Zombies : MonoBehaviour
      private void Movement () {
 
         if (GameManager.instance.player) { //null reference check
-            transform.LookAt(GameManager.instance.player.transform.position); //Look at the player
+            transform.LookAt(player.transform.position); //Look at the player
             transform.position += transform.forward * moveSpeed * Time.deltaTime;             
         }
-        
+   
     }
 
      public void TakeDamage (float damage) {

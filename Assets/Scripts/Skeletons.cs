@@ -13,12 +13,12 @@ public class Skeletons : MonoBehaviour
     [SerializeField] private float damageTime; 
 
     public Animator animator;
-    public Player player;
+    public GameObject player;
     // Start is called before the first frame update
     
     void Start()
     {
-        player = FindObjectOfType<Player>();
+        player = GameObject.FindGameObjectWithTag("Player");
         childObject = transform.GetChild(0).gameObject;
         animator = childObject.GetComponent<Animator>();
         animator.SetBool("run", true);
@@ -51,7 +51,7 @@ public class Skeletons : MonoBehaviour
      private void Movement () {
 
         if (GameManager.instance.player) { //null reference check
-            transform.LookAt(GameManager.instance.player.transform.position); //Look at the player
+            transform.LookAt(player.transform.position); //Look at the player
             transform.position += transform.forward * moveSpeed * Time.deltaTime;             
         }
 

@@ -976,6 +976,7 @@ MonoBehaviour:
   damageTime: 0
   animator: {fileID: 0}
   player: {fileID: 0}
+  play1: {fileID: 9193869979808450016, guid: e39fb7f078b43ab4abc1bc6048e671f7, type: 3}
 --- !u!65 &191540516691563298
 BoxCollider:
   m_ObjectHideFlags: 0
