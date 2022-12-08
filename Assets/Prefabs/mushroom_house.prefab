@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8626628798659019133
+--- !u!1 &1763579858514626797
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8626628798659284555}
-  - component: {fileID: 8626628798655805413}
-  - component: {fileID: 8626628798657297707}
-  - component: {fileID: 8626628797615225738}
-  - component: {fileID: 8626628797615225741}
+  - component: {fileID: 1763579858514364379}
+  - component: {fileID: 1763579858517835381}
+  - component: {fileID: 1763579858516636859}
+  - component: {fileID: 1763579859557626394}
+  - component: {fileID: 1763579859557626397}
   m_Layer: 0
   m_Name: mushroom_house
   m_TagString: Untagged
@@ -20,13 +20,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8626628798659284555
+--- !u!4 &1763579858514364379
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8626628798659019133}
+  m_GameObject: {fileID: 1763579858514626797}
   m_LocalRotation: {x: -0.4807188, y: 0.53111196, z: 0.62674314, w: 0.30663103}
   m_LocalPosition: {x: -145.98, y: 4.35, z: -99.95}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
@@ -35,21 +35,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8626628798655805413
+--- !u!33 &1763579858517835381
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8626628798659019133}
+  m_GameObject: {fileID: 1763579858514626797}
   m_Mesh: {fileID: 4300000, guid: 1159c5d1a8f2c0d4599609970709ce97, type: 3}
---- !u!23 &8626628798657297707
+--- !u!23 &1763579858516636859
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8626628798659019133}
+  m_GameObject: {fileID: 1763579858514626797}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -87,13 +87,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8626628797615225738
+--- !u!64 &1763579859557626394
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8626628798659019133}
+  m_GameObject: {fileID: 1763579858514626797}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -101,15 +101,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 1159c5d1a8f2c0d4599609970709ce97, type: 3}
---- !u!114 &8626628797615225741
+--- !u!114 &1763579859557626397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8626628798659019133}
+  m_GameObject: {fileID: 1763579858514626797}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 654f471c99cd146578612626ca964ab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShopMenu: {fileID: 4631712766310378210, guid: b49c234e0d2c78441978d8505a04796b, type: 3}
+  ZombiePrefab: {fileID: 8479901611056001638, guid: 93acb8ff669d12c4caec8cc0f9f70bc5, type: 3}
+  SkeletonPrefab: {fileID: 191540516691563299, guid: 2b44b54ab6b4bc548abad0eb41af1df9, type: 3}
