@@ -29,9 +29,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         Physics.IgnoreLayerCollision(6,7);
-
-        SetScoreText();
+        SetScoreText(); 
 
 
         // if (instance==null){
@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
     void SetScoreText()
     {
         // scoreTEXT <-- is the tag for scoretext
+        GameObject temp = GameObject.FindGameObjectWithTag("startMenu");
         scoreText.text = "Score: " + score.ToString(); //This will allow us to concatonate two strings in C#    
 
     }

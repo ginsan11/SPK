@@ -45,6 +45,7 @@ public class Player : MonoBehaviour
     {
         if (GameManager.instance.getlvl() == 1.0f)
         {
+            startMenu.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 0;
