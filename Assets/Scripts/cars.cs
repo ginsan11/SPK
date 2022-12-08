@@ -8,7 +8,7 @@ public class cars : MonoBehaviour
 {
     public GameObject player;
 
-    [SerializeField] private float Speed = 8.0f;
+    [SerializeField] private float Speed;
     //[SerializeField] private float health = 100.0f;
 
     //[SerializeField] private float damageToPlayer = -9999.0f;
@@ -17,6 +17,8 @@ public class cars : MonoBehaviour
 
     void Start()
     {
+        //float value = (GameManager.instance.getlvl * 8.9f);
+        Speed = Random.Range(8.0f, (GameManager.instance.getlvl() * 8.9f)); 
 
     }
 
