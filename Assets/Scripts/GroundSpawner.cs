@@ -16,7 +16,9 @@ public class GroundSpawner : MonoBehaviour
     GameObject[] TerrainArray;
 
     Vector3 nexTileSpawn;
-    public float currentlvl;
+    public int currentlvl;
+
+    public GameObject housePrefab;
     
 
  
@@ -26,15 +28,25 @@ public class GroundSpawner : MonoBehaviour
     void Start()
     {
         TerrainArray = new GameObject[] { Terrain1, Terrain2, Terrain3, Terrain4, Terrain5, Terrain6, Terrain7, Terrain8, Terrain9 };
-        currentlvl = GameManager.instance.getlvl();
+        currentlvl = (int) GameManager.instance.getlvl();
         print("THIS IS THE CURRENT LEVL    :  " + GameManager.instance.getlvl());
 
         
         nexTileSpawn = TerrainArray[0].transform.GetChild(0).transform.position;
-        for(float i = 1.0f; i < currentlvl; i++){
-            SpawnTile(false);
+
+        int houseterrain = Random.Range(1, (int) (currentlvl+2));
+        print("RANDOM NUMBER WAS :" + houseterrain);
+
+        for(int i = 1; i < currentlvl; i++){
+            if (houseterrain == i){
+                SpawnTile(false, true);
+            }
         }
-        SpawnTile(true);
+        if (houseterrain == currentlvl+1){
+            SpawnTile(true, true);
+        }else{
+            SpawnTile(true, false);
+        }
 
         //SpawnTile();
     }
@@ -45,19 +57,34 @@ public class GroundSpawner : MonoBehaviour
         
     }
 
-    public void SpawnTile(bool wall)
+    public void SpawnTile(bool wall, bool house)
     {
         if (!wall){
             int rand_num = Random.Range(0, 8); //Random Terrain Index Selected 
             GameObject temp = Instantiate(TerrainArray[rand_num], nexTileSpawn, Quaternion.identity);   //Terrain created
             nexTileSpawn = temp.transform.GetChild(0).transform.position;  //Spawn point for next terrain selected
-        }else{
+
+            //House Spawn on map
+            if (house){
+                print("build inside 1");
+                Vector3 randomSpawnPosition = new Vector3(Random.Range(-140.0f, -140.0f), 3.8f, Random.Range(-90f, -90.0f));
+                Instantiate(housePrefab, randomSpawnPosition, Quaternion.identity);
+            }
+        }else{  //if terrain needs wall run this 
             int rand_num = Random.Range(0, 8); //Random Terrain Index Selected 
             GameObject temp = Instantiate(TerrainArray[rand_num], nexTileSpawn, Quaternion.identity);   //Terrain created
             //Transform edge_wall = temp.transform.Find("Child Name");
             temp.transform.Find("Edge Rocks").transform.Find("Rock_02 (3)").gameObject.SetActive(true); 
             //edge_wall.active = true;
             nexTileSpawn = temp.transform.GetChild(0).transform.position;  //Spawn point for next terrain selected
+
+            if (house){
+                print("build inside 2");
+
+                Vector3 randomSpawnPosition = new Vector3(Random.Range(-140.0f, -140.0f), 3.8f, Random.Range(-90f, -90.0f));
+                Instantiate(housePrefab, randomSpawnPosition, Quaternion.identity);
+            }
+            
         }
     }
 
