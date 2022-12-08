@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 9193869979808450016, guid: e39fb7f078b43ab4abc1bc6048e671f7, type: 3}
-  scoreText: {fileID: 551581867599057364, guid: 27f023de035e44ff6b2daaf9c3a3155d, type: 3}
+  scoreText: {fileID: 576606100666786234, guid: 7d124f8bf636b6843a6549004d36c7f2, type: 3}
   score: 0
   Health: {fileID: 7350624665204139557, guid: a6f804efc48324f0a8349840c69a9809, type: 3}
   lvl: 1

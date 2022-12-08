@@ -50,12 +50,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (player == null)
-        {
-            score = 0;
-            scoreText.text = "Score: " + score.ToString();
-        }
+        score = 0;
+        scoreText.text = "Score: " + score.ToString();
     }
 
 

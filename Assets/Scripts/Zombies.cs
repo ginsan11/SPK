@@ -39,7 +39,9 @@ public class Zombies : MonoBehaviour
         health -= damage; 
 
         if (health <= 0) {
-            Destroy(this.gameObject); 
+            GameManager.instance.AddPoints(1);
+            Destroy(this.gameObject);
+          
         }
     }
 

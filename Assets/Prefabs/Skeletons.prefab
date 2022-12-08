@@ -369,7 +369,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b1494958bf9856a479bec1767c02878e, type: 2}
+  - {fileID: 2100000, guid: 353466c49cf019540bf2ac95815b7c1e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -975,6 +975,7 @@ MonoBehaviour:
   damageRate: 0.5
   damageTime: 0
   animator: {fileID: 0}
+  player: {fileID: 0}
 --- !u!65 &191540516691563298
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1511,7 +1512,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b1494958bf9856a479bec1767c02878e, type: 2}
+  - {fileID: 2100000, guid: 1df4fadf17c21d245a75f30ce214801b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
